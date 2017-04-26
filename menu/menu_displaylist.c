@@ -2626,7 +2626,8 @@ static int menu_displaylist_parse_horizontal_list(
 
    menu_driver_ctl(RARCH_MENU_CTL_PLAYLIST_GET, &playlist);
 
-   playlist_qsort(playlist);
+   if (settings->playlist_sort_entries)
+      playlist_qsort(playlist);
 
    if (memcmp(lpl_basename, "content_history", 15) == 0)
       is_historylist = true;
@@ -5742,7 +5743,8 @@ bool menu_displaylist_ctl(enum menu_displaylist_ctl_state type, void *data)
 
             menu_driver_ctl(RARCH_MENU_CTL_PLAYLIST_GET, &playlist);
 
-            playlist_qsort(playlist);
+            if (settings->playlist_sort_entries)
+               playlist_qsort(playlist);
 
             ret = menu_displaylist_parse_playlist(info,
                   playlist, path_playlist, false);

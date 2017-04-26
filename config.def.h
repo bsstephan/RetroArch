@@ -436,6 +436,9 @@ static bool bundle_assets_extract_enable = false;
 static const bool def_history_list_enable = true;
 static const bool def_playlist_entry_remove = true;
 
+/* Whether or not to sort the playlist entries when displayed in menus. */
+static const bool def_playlist_sort_entries = true;
+
 static const unsigned int def_user_language = 0;
 
 #if (defined(_WIN32) && !defined(_XBOX)) || (defined(__linux) && !defined(ANDROID) && !defined(HAVE_LAKKA)) || (defined(__MACH__) && !defined(IOS))
