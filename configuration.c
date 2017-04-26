@@ -857,6 +857,7 @@ static struct config_bool_setting *populate_settings_bool(settings_t *settings, 
    SETTING_BOOL("savestate_thumbnail_enable",   &settings->savestate_thumbnail_enable, true, savestate_thumbnail_enable, false);
    SETTING_BOOL("history_list_enable",          &settings->history_list_enable, true, def_history_list_enable, false);
    SETTING_BOOL("playlist_entry_remove",        &settings->playlist_entry_remove, true, def_playlist_entry_remove, false);
+   SETTING_BOOL("playlist_sort_entries",        &settings->playlist_sort_entries, true, def_playlist_sort_entries, false);
    SETTING_BOOL("game_specific_options",        &settings->game_specific_options, true, default_game_specific_options, false);
    SETTING_BOOL("auto_overrides_enable",        &settings->auto_overrides_enable, true, default_auto_overrides_enable, false);
    SETTING_BOOL("auto_remaps_enable",           &settings->auto_remaps_enable, true, default_auto_remaps_enable, false);

@@ -2626,7 +2626,8 @@ static int menu_displaylist_parse_horizontal_list(
 
    menu_driver_ctl(RARCH_MENU_CTL_PLAYLIST_GET, &playlist);
 
-   playlist_qsort(playlist);
+   if (settings->playlist_sort_entries)
+      playlist_qsort(playlist);
 
    if (memcmp(lpl_basename, "content_history", 15) == 0)
       is_historylist = true;
@@ -4385,6 +4386,9 @@ bool menu_displaylist_ctl(enum menu_displaylist_ctl_state type, void *data)
                PARSE_ONLY_UINT, false);
          ret = menu_displaylist_parse_settings_enum(menu, info,
                MENU_ENUM_LABEL_PLAYLIST_ENTRY_REMOVE,
+               PARSE_ONLY_BOOL, false);
+         ret = menu_displaylist_parse_settings_enum(menu, info,
+               MENU_ENUM_LABEL_PLAYLIST_SORT_ENTRIES,
                PARSE_ONLY_BOOL, false);			   
 
          menu_displaylist_parse_playlist_associations(info);
@@ -5742,7 +5746,8 @@ bool menu_displaylist_ctl(enum menu_displaylist_ctl_state type, void *data)
 
             menu_driver_ctl(RARCH_MENU_CTL_PLAYLIST_GET, &playlist);
 
-            playlist_qsort(playlist);
+            if (settings->playlist_sort_entries)
+               playlist_qsort(playlist);
 
             ret = menu_displaylist_parse_playlist(info,
                   playlist, path_playlist, false);

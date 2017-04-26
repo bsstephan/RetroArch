@@ -483,6 +483,8 @@ MSG_HASH(
       "History List Size")
 MSG_HASH(MENU_ENUM_LABEL_VALUE_PLAYLIST_ENTRY_REMOVE,
       "Allow to remove entries")
+MSG_HASH(MENU_ENUM_LABEL_VALUE_PLAYLIST_SORT_ENTRIES,
+      "Sort entries by name")
 MSG_HASH(MENU_ENUM_LABEL_VALUE_CONTENT_SETTINGS,
       "Quick Menu")
 MSG_HASH(MENU_ENUM_LABEL_VALUE_CORE_ASSETS_DIR,
@@ -2804,6 +2806,8 @@ MSG_HASH(MENU_ENUM_SUBLABEL_THREADED_DATA_RUNLOOP_ENABLE,
       "Perform tasks on a separate thread.")
 MSG_HASH(MENU_ENUM_SUBLABEL_PLAYLIST_ENTRY_REMOVE,
       "Allow the user to remove entries from collections.")
+MSG_HASH(MENU_ENUM_SUBLABEL_PLAYLIST_SORT_ENTRIES,
+      "When displaying playlists, sort their entries by name; otherwise, the playlist's order is used.")
 MSG_HASH(MENU_ENUM_SUBLABEL_SYSTEM_DIRECTORY,
       "Sets the System directory. Cores can query for this directory to load BIOSes, system-specific configs, etc.")
 MSG_HASH(MENU_ENUM_SUBLABEL_RGUI_BROWSER_DIRECTORY,

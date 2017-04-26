@@ -436,6 +436,7 @@ typedef struct settings
 
    bool history_list_enable;
    bool playlist_entry_remove;
+   bool playlist_sort_entries;
    bool rewind_enable;
    size_t rewind_buffer_size;
    unsigned rewind_granularity;
